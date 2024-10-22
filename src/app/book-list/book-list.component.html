@@ -1,0 +1,32 @@
+<table>
+  <thead>
+    <tr>
+      <th>Is Done</th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of items; track $index) {
+    <tr>
+      <td>
+        <input
+          type="checkbox"
+          [checked]="items[$index].isDone"
+          (click)="isDone($index)"
+        />
+      </td>
+      <td>
+        {{ items[$index].title }}
+      </td>
+      <td>
+        {{ items[$index].year }}
+      </td>
+      <td>
+        {{ items[$index].author }}
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
