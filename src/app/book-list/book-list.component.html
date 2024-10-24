@@ -1,3 +1,5 @@
+<p>Book List</p>
+
 <table>
   <thead>
     <tr>
@@ -18,7 +20,13 @@
         />
       </td>
       <td>
-        {{ items[$index].title }}
+        <div class="cell-container">
+          <span class="title">{{ items[$index].title }}</span>
+          <div class="buttons-container">
+            <button class="edit-button">Edit</button>
+            <button class="delete-button">Delete</button>
+          </div>
+        </div>
       </td>
       <td>
         {{ items[$index].year }}
@@ -30,3 +38,5 @@
     }
   </tbody>
 </table>
+
+<button class="add-button" (click)="addBook()">Add Book</button>

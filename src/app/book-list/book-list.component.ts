@@ -21,9 +21,47 @@ export class BookListComponent {
       author: 'Harper Lee',
       isDone: false,
     },
+    {
+      title: 'War and Peace',
+      year: 1869,
+      author: 'Leo Tolstoy',
+      isDone: false,
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      year: 1960,
+      author: 'Harper Lee',
+      isDone: false,
+    },
+    {
+      title: 'War and Peace',
+      year: 1869,
+      author: 'Leo Tolstoy',
+      isDone: false,
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      year: 1960,
+      author: 'Harper Lee',
+      isDone: false,
+    },
+    {
+      title: 'War and Peace',
+      year: 1869,
+      author: 'Leo Tolstoy',
+      isDone: false,
+    },
+    {
+      title: 'To Kill a Mockingbird',
+      year: 1960,
+      author: 'Harper Lee',
+      isDone: false,
+    },
   ];
 
   isDone(index: number): void {
     this.items[index].isDone = !this.items[index].isDone;
   }
+
+  addBook() {}
 }

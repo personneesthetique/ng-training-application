@@ -1,3 +1,8 @@
+p {
+  font-size: 30px;
+  text-align: center;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -6,9 +11,29 @@ th,
 td {
   padding: 8px;
   text-align: left;
-  border: 1px solid black;
+  width: 200px;
 }
 
 th {
   background-color: #f2f2f2;
+}
+
+input {
+  width: 20px;
+  height: 20px;
+}
+
+.add-button {
+  width: 100%;
+}
+
+.cell-container {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
 }
