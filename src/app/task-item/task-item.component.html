@@ -1,0 +1,32 @@
+<div class="task-item__container">
+  <input
+    class="task-item__checkbox"
+    type="checkbox"
+    (click)="completeTask()"
+    [checked]="taskData.isCompleted"
+  />
+
+  <div
+    class="task-item__description"
+    [style.textDecoration]="taskData.isCompleted ? 'line-through' : 'none'"
+  >
+    {{ taskData.description }}
+  </div>
+
+  <div class="task-item__button-container">
+    <button
+      class="task-item__update-button"
+      type="button"
+      (click)="updateTask()"
+    >
+      Edit
+    </button>
+    <button
+      class="task-item__remove-button"
+      type="button"
+      (click)="removeTask()"
+    >
+      Delete
+    </button>
+  </div>
+</div>

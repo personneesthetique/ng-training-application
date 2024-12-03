@@ -1,0 +1,21 @@
+<app-task-item
+  *ngFor="let task of taskList"
+  [taskData]="task"
+  (taskRemoved)="removeTask($event)"
+>
+</app-task-item>
+
+<input
+  class="task-list__add-task-input"
+  type="text"
+  placeholder="Add Task"
+  id="add-task"
+/>
+<button
+  class="task-list__add-task-button"
+  type="button"
+  id="add-task"
+  (click)="addTask()"
+>
+  Add
+</button>
