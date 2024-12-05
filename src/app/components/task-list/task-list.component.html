@@ -1,0 +1,13 @@
+<app-task-item
+  *ngFor="let task of taskService.getTasks() | async"
+  [task]="task"
+>
+</app-task-item>
+
+<input
+  class="task-list__add-task-input"
+  placeholder="Add Task"
+  [(ngModel)]="taskInputValue"
+/>
+
+<button class="task-list__add-task-button" (click)="addTask()">Add</button>
