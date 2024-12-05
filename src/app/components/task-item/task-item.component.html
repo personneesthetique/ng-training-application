@@ -1,0 +1,37 @@
+<div class="task-item__container">
+  <input
+    class="task-item__checkbox"
+    type="checkbox"
+    (click)="completeTask()"
+    [checked]="task.isCompleted"
+  />
+
+  <div
+    #taskItemDescription
+    *ngIf="!isEditMode"
+    class="task-item__description"
+    [style.textDecoration]="task.isCompleted ? 'line-through' : 'none'"
+  >
+    {{ task.description }}
+  </div>
+
+  <div *ngIf="isEditMode" class="task-item__update-input">
+    <input
+      #taskItemUpdateInput
+      (blur)="updateTask()"
+      [(ngModel)]="taskDescription"
+    />
+  </div>
+
+  <div class="task-item__button-container">
+    <button class="task-item__update-button" (click)="setEditTaskMode()">
+      Edit
+    </button>
+    <button
+      class="task-item__remove-button"
+      (click)="taskService.deleteTask(task.id)"
+    >
+      Delete
+    </button>
+  </div>
+</div>
