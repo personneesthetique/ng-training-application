@@ -1,11 +1,7 @@
 :host {
-  display: block;
+  display: flex;
   font-family: "JetBrains Mono", Courier, monospace;
   margin: 2px;
-}
-
-.task-item__container {
-  display: flex;
   justify-content: space-between;
   max-width: 400px;
   gap: 3px;

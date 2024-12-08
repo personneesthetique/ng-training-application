@@ -1,9 +1,9 @@
-import { Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TaskItemComponent } from '../task-item/task-item.component';
 import { TaskService } from '../../services/task.service';
-import { FormsModule } from '@angular/forms';
 import { Task } from '../task-item/types/task.type';
 
 @Component({
@@ -17,10 +17,12 @@ export class TaskListComponent {
   public taskService = inject(TaskService);
 
   taskInputValue: string = '';
+  
+  previousId: number = 0;
 
   addTask() {
     const task: Task = {
-      id: Math.random(),
+      id: this.previousId++,
       dateCreated: Date.now(),
       description: this.taskInputValue,
       isCompleted: false,

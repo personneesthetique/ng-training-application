@@ -6,10 +6,11 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-import { Task } from './types/task.type';
 import { CommonModule } from '@angular/common';
-import { TaskService } from '../../services/task.service';
 import { FormsModule } from '@angular/forms';
+
+import { Task } from './types/task.type';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task-item',
@@ -26,9 +27,6 @@ export class TaskItemComponent {
   changeDetectorRef = inject(ChangeDetectorRef);
 
   @Input() task!: Task;
-
-  @ViewChild('taskItemDescription')
-  taskDescriptionElement!: ElementRef<HTMLDivElement>;
 
   @ViewChild('taskItemUpdateInput')
   taskItemUpdateInputElement!: ElementRef<HTMLInputElement>;
