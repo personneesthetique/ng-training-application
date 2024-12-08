@@ -17,12 +17,10 @@ export class TaskListComponent {
   public taskService = inject(TaskService);
 
   taskInputValue: string = '';
-  
-  previousId: number = 0;
 
   addTask() {
     const task: Task = {
-      id: this.previousId++,
+      id: Date.now(),
       dateCreated: Date.now(),
       description: this.taskInputValue,
       isCompleted: false,
